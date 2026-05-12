@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Fish-PACE Hackweek 2025
+title: OM-Fish Hackweek 2027
 author: content EE Holmes, template UW/eScience Institute
 logo: logo.png
 only_build_toc_files: false
@@ -10,13 +10,13 @@ parse:
   # https://jupyterbook.org/content/content-blocks.html?highlight=myst%20substitution#define-substitutions-for-your-whole-book
   # https://jupyterbook.org/content/content-blocks.html#using-substitutions-in-links
   myst_substitutions:
-    hackweek: "Fish-PACE Hackweek"
-    dates: "Oct 20 to 24, 2025"
-    github_org_url: "https://github.com/fish-pace"
-    book_repo: "hackweek-2025"
-    website_url: "https://fish-pace.github.io/hackweek-2025/"
+    hackweek: "OM-Fish Hackweek"
+    dates: "January 2027"
+    github_org_url: "https://github.com/nmfs-opensci"
+    book_repo: "om-fish-2027"
+    website_url: "https://nmfs-opensci.github.io/om-fish-2027/"
     jupyterhub_url: "https://nmfs-openscapes.2i2c.cloud"
-    slack_workspace_url: "https://fish-pace.slack.com/"
+    slack_workspace_url: "https://om-fish.slack.com/"
     contact_email: "eeholmes@uw.edu"
     anon_reporting_url: ""
     project_spreadsheet_url: "https://fish-pace.github.io/hackweek-2025/projects/list_of_projects.md"
@@ -40,7 +40,7 @@ parse:
     https: null
     http: null
     mailto: null
-    nb: /hackweek-2025/_sources/presentations/notebooks/{{path}}
+    nb: /om-fish-2027/_sources/presentations/notebooks/{{path}}
 
 # See https://jupyterbook.org/content/execute.html
 execute:
@@ -59,7 +59,7 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: "https://github.com/fish-pace/hackweek-2025" # Online location of your book
+  url: "https://github.com/nmfs-opensci/om-fish-2027" # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
