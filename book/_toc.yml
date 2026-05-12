@@ -1,0 +1,42 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+root: intro
+format: jb-book
+parts:
+- caption: Details
+  chapters:
+    - file: logistics
+    - title: Schedule
+      url: https://fish-pace.github.io/hackweek-2025/index.html?jump_to=schedule
+    - title: Team
+      url: https://fish-pace.github.io/hackweek-2025/index.html?jump_to=team
+    - title: JupyterHub
+      url:  https://nmfs-openscapes.2i2c.cloud
+    - file: CoC
+- caption: Preparation
+  chapters:
+    - file: preliminary/index
+    - file: preliminary/checklist
+    - file: preliminary/git
+    - file: reference/intro_to_python
+- caption: Presentations
+  chapters:
+    - file: presentations/lectures
+    - file: presentations/tutorials
+    - file: presentations/extras
+- caption: Projects
+  chapters:
+    - file: projects/index
+    - file: projects/list_of_projects
+- caption: Reference
+  chapters:
+    - file: preliminary/learning
+    - url: https://ocean-satellite-tools.github.io/hyper-fish-book/
+      title: Hyperspectral products for fisheries
+    - url: https://pace.oceansciences.org/applications.htm
+      title: PACE Applications
+    - url: https://pace.oceansciences.org/data_table.htm
+      title: Data availability
+    - file: reference/glossary
+    - file: reference/questions
+

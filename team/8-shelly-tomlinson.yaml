@@ -1,0 +1,15 @@
+- title: Shelly Tomlinson
+  avatar: https://raw.githubusercontent.com/fish-pace/hackweek-2025/main/team/img/shelly.jpeg
+  role: Research Oceanographer
+  organizations:
+    - name: National Centers for Coastal Ocean Science
+      url: https://coastalscience.noaa.gov/staff/michelle-shelly-tomlinson/
+  bio: As a research oceanographer at the branch and the East Coast Node manager for NOAA’s CoastWatch program, Shelly has been responsible for developing satellite remote sensing products and tools for algal bloom monitoring, the development and successful transfer of operational forecasts for HABs in several regions across the U.S., and the development of tools and training activities associated with CoastWatch. Shelly is a steering committee member of the Harmful Algal Bloom Observing Network Community of Practice and a member of the International Society for the Study of Harmful Algae. 
+  expertise:
+    - ocean color
+    - harmul algal blooms
+  social:
+    - icon: linkedin
+      link: https://www.linkedin.com/in/michelle-tomlinson-noaa-federal-28ab5930a/
+  user_groups:
+    - Science Lecturer
