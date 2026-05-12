@@ -17,7 +17,7 @@ Project development timeline:
 * *by morning day two*: create a Github repository in our hackweek GitHub organization and start coding and working on tasks!
 * *last day*: presentation of your project work. What did you create? What did you learn? 
 
-Examples of previous PACE projects can be found on the [2024 PACE HackWeek website](https://pacehackweek.github.io/pace-2024/projects/list_of_projects.html) and [2024 OceanHackWeek](https://oceanhackweek.org/ohw24/projects/projects_thisyear.html).
+Examples of previous ocean hackweek projects can be found on the [2024 PACE HackWeek website](https://pacehackweek.github.io/pace-2024/projects/list_of_projects.html) and [2024 OceanHackWeek](https://oceanhackweek.org/ohw24/projects/projects_thisyear.html).
 
 
 ```{image} ../img/projects-montage.png
