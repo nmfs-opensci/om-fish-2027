@@ -3,12 +3,12 @@
 These are tutorials that will not be presented at the hackweek, but that may be useful for your projects. The Jupyter notebooks can be run in Colab (free, just requires Google account) or our
 JupyterHub with all the necessary Python software packages installed. 
 
-**How to run the tutorials?** You can either download and upload the tutorials (click download icon) or view the tutorial (click eye icon) and you will see options to open the tutorial in the JupyterHub or Colab. You can also go to the [tutorial GitHub repo](https://github.com/fish-pace/2025-tutorials) and clone that into the JupyterHub or your local machine.
+**How to run the tutorials?** You can either download and upload the tutorials (click download icon) or view the tutorial (click eye icon) and you will see options to open the tutorial in the JupyterHub or Colab.
 
 | Title | Slides | Notebook {{ l1 }} | Notebook {{ d1 }} | Recording | Colab |
 | :---- | :----: | :------: | :-------: |  :-------: | :-------:|
 | Bio-Argo Data  |    | [{{ l1 }}][ba-n] |  <a href="/hackweek-2025/_sources/presentations/notebooks/argopy.ipynb" download>{{ d1 }}</a> |  [{{ v0 }}][ba-v] | [{{ c1 }}][ba-c] |
-| Bio-Argo Matchups to PACE  |    | [{{ l1 }}][bam-n] |  <a href="/hackweek-2025/_sources/presentations/notebooks/argo-matchups.ipynb" download>{{ d1 }}</a> |  [{{ v0 }}][ba-v] | [{{ c1 }}][bam-c] |
+| Bio-Argo Matchups  |    | [{{ l1 }}][bam-n] |  <a href="/hackweek-2025/_sources/presentations/notebooks/argo-matchups.ipynb" download>{{ d1 }}</a> |  [{{ v0 }}][ba-v] | [{{ c1 }}][bam-c] |
 | OOI Mooring Data  |    | [{{ l1 }}][ooi-n] |  <a href="/hackweek-2025/_sources/presentations/notebooks/ooi.ipynb" download>{{ d1 }}</a> |  [{{ v0 }}][ooi-v] | [{{ c1 }}][ooi-c] |
 | Simple machine learning - CNN  | [{{ l0 }}][cnn-l]   | [{{ l1 }}][cnn-n] |  <a href="/hackweek-2025/_sources/presentations/notebooks/notebooks/CNN_2D.ipynb" download>{{ d1 }}</a> |  [{{ v0 }}][cnn-v] | [{{ c1 }}][cnn-c] |
 
