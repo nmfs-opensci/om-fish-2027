@@ -7,10 +7,10 @@ tabs:
     description: 10am to 1:30pm ET
     time: 7:00 - 10:30
   - title: East Project Introduction
-    description: Welcome, Introductions, & Housekeeping
+    description: Welcome, introductions, housekeeping, and overview of OM-Fish Hackweek themes
     time: 7:00 - 7:45
   - title: East Group Project Brainstorming (3 rotations)
-    description: null
+    description: Brainstorm project ideas around ocean model data, fisheries habitat, ecosystem indicators, and climate impacts
     time: 7:45 - 8:45
   - title: East Project Pitching
     description: 1 slide pitch
@@ -19,21 +19,21 @@ tabs:
     description: Each project will have a breakout room and start to get organized.
     time: 9:30 - 10:30
   - title: Break
-    time: 10:30 - 11:00    
+    time: 10:30 - 11:00
   - title: Science Lecture
-    description: Introduction to Ocean Models
+    description: Introduction to Ocean Model Data — ROMS, MOM6, HYCOM, reanalyses, forecasts, and climate simulations
     time: 11:00 - 11:30
   - title: Science Lecture
-    description: Hyperspectral Products for Fisheries Applications [lectures](https://fish-pace.github.io/hackweek-2025/presentations/lectures.html)
+    description: Ocean Models for Fisheries and Ocean Ecosystems — physical habitat, temperature, oxygen, mixed layer depth, and ecosystem indicators
     time: 11:30 - 12:15
   - title: Break
     description: null
     time: 12:15 - 12:30
   - title: Coding Tutorial 1
-    description: Orientation for the Hackweek JupyterHub [tutorials](https://fish-pace.github.io/hackweek-2025/presentations/tutorials.html)
+    description: Orientation for the Hackweek JupyterHub and shared cloud computing environment
     time: 12:30 - 13:00
   - title: Coding Tutorial 2
-    description: Accessing PACE data via earthaccess [tutorials](https://fish-pace.github.io/hackweek-2025/presentations/tutorials.html)
+    description: Accessing global ocean model data with Python — xarray, dask, NetCDF, Zarr, and cloud-friendly workflows
     time: 13:00 - 14:00
   - title: Break
     time: 14:00 - 14:30
@@ -41,10 +41,10 @@ tabs:
     description: 2:30pm to 5:30pm PT
     time: 14:30 - 17:30
   - title: West Project Introduction
-    description: Welcome, Introductions, & Housekeeping [slides](https://docs.google.com/presentation/d/1fS9mCqvg_kWwCQ0Ud5_9uLb1CjNBw62e/present?slide=id.p1)
+    description: Welcome, introductions, housekeeping, and overview of OM-Fish Hackweek themes
     time: 14:30 - 15:15
   - title: West Group Project Brainstorming (3 rotations)
-    description: null
+    description: Brainstorm project ideas around ocean model data, fisheries habitat, ecosystem indicators, and climate impacts
     time: 15:15 - 16:00
   - title: West Project Pitching
     description: 1 slide pitch
@@ -52,11 +52,12 @@ tabs:
   - title: West Group Project Breakout Rooms
     description: Each project will have a breakout room and start to get organized.
     time: 16:30 - 17:30
+
 - title: Day 2
   date: Tuesday
   contents:
   - title: East Tutorial
-    description: Fish-PACE Hackweek Collaboration via Git and GitHub [slides](https://docs.google.com/presentation/d/1JuS8pNoq0__TyQMsTcXvvmSO8eaxJkAcxJQIlVpM2XA/present)
+    description: OM-Fish Hackweek Collaboration via Git and GitHub
     time: 7:00 - 7:30
   - title: East Project Work Time
     description: Each project will have a breakout room.
@@ -65,24 +66,22 @@ tabs:
     description: Bring your questions and go into breakout room with a mentor
     time: 9:00 - 10:30
   - title: Break
-    time: 10:30 - 11:00    
+    time: 10:30 - 11:00
   - title: Science Lecture
-    description: Harmful Algal Blooms and Hyperspectral Ocean Color Data [lectures](https://fish-pace.github.io/hackweek-2025/presentations/lectures.html)
-    time: 11:00 -11:45
+    description: Incorporating modeled prey fields into baleen whale species distribution models
+    time: 11:00 - 11:45
   - title: Break
     description: null
     time: 11:45 - 12:15
   - title: Coding Tutorial 1
-    description: Remote Sensing Reflectance (Rrs) [tutorials](https://fish-pace.github.io/hackweek-2025/presentations/tutorials.html)
+    description: Working with 3D ocean variables — temperature, salinity, oxygen, currents, and mixed layer depth
     time: 12:15 - 13:00
   - title: Break
     description: null
     time: 13:00 - 13:15
   - title: Coding Tutorial 2
-    description: Data Matchups
+    description: Building fish habitat metrics — viable temperature ranges, oxygen thresholds, and habitat compression
     time: 13:15 - 14:00
-    leads:
-    - Ryan Vandermeulen
   - title: Break
     time: 14:00 - 14:30
   - title: West Tutorial
@@ -91,6 +90,7 @@ tabs:
   - title: West Project Work Time
     description: Each project will have a breakout room.
     time: 15:00 - 17:30
+
 - title: Day 3
   date: Wednesday
   contents:
@@ -104,25 +104,21 @@ tabs:
     description: Bring your questions and go into breakout room with a mentor
     time: 9:00 - 10:30
   - title: Break
-    time: 10:30 - 11:00 
+    time: 10:30 - 11:00
   - title: Science Lecture
-    description: Phytoplankton Community Composition from Ocean Color
-    time: 11:00 -11:45
-    leads:
-    - Sasha Kramer
+    description: TBD
+    time: 11:00 - 11:45
   - title: Break
     description: null
     time: 11:45 - 12:15
   - title: Coding Tutorial 1
-    description: Accessing and Visualizing MOANA Data
+    description: Accessing and visualizing biogeochemical variables — oxygen, chlorophyll, nutrients, and primary production
     time: 12:15 - 13:00
-    leads:
-    - Ryan Vandermeulen
   - title: Break
     description: null
     time: 13:00 - 13:15
   - title: Coding Tutorial 2
-    description: Optical water classification and clustering
+    description: Combining model output with observations — Argo, Bio-Argo, satellite data, and fisheries survey data
     time: 13:15 - 14:00
   - title: Break
     time: 14:00 - 14:30
@@ -130,10 +126,11 @@ tabs:
     description: null
     time: 14:30 - 15:00
     leads:
-    - Eli Holmes  
+    - Eli Holmes
   - title: West Project Work Time
     description: Each project will have a breakout room.
     time: 15:00 - 17:30
+
 - title: Day 4
   date: Thursday
   contents:
@@ -149,30 +146,31 @@ tabs:
     leads:
     - mentors
   - title: Break
-    time: 10:30 - 11:00    
+    time: 10:30 - 11:00
   - title: Science Lecture
-    description: Optical Light Fields and Fish Behavior [lectures](https://fish-pace.github.io/hackweek-2025/presentations/lectures.html)
+    description: Climate Projections for Fisheries Habitat — CMIP6, Earth System Models, future scenarios, and uncertainty
     time: 11:00 - 11:45
   - title: Break
     description: null
     time: 11:45 - 12:00
   - title: Coding Tutorial 1
-    description: Exploring Light Attenuation with Kd [tutorials](https://fish-pace.github.io/hackweek-2025/presentations/tutorials.html)
+    description: Working with CMIP6 ocean variables — historical runs, future scenarios, ensembles, and anomalies
     time: 12:00 - 12:45
   - title: Break
     description: null
-    time: 12:30 - 12:45
+    time: 12:45 - 13:00
   - title: Coding Tutorial 2
-    description: PACE, Bio-Argo and Machine-learning [tutorials](https://fish-pace.github.io/hackweek-2025/presentations/tutorials.html)
-    time: 12:45 - 13:30
+    description: Regional case studies — comparing habitat change across ocean basins, shelves, and fisheries regions
+    time: 13:00 - 13:45
   - title: Break
-    time: 13:30 - 14:00
+    time: 13:45 - 14:30
   - title: West Group Check-ins (Rose, Bud, Thorn)
     description: null
     time: 14:30 - 15:00
   - title: West Project Work Time
     description: Each project will have a breakout room.
     time: 15:00 - 17:30
+
 - title: Day 5
   date: Friday
   contents:
@@ -180,17 +178,14 @@ tabs:
     description: Each project will have a breakout room.
     time: 7:00 - 11:00
   - title: Project Presentations
-    description: East & West together
+    description: East & West together — project demos, workflows, and preliminary findings
     time: 11:00 - 12:30
   - title: Break
     description: null
     time: 12:30 - 13:00
   - title: Project Presentations
-    description: East & West together
+    description: East & West together — project demos, workflows, and preliminary findings
     time: 13:00 - 14:00
   - title: HackWeek Wrap-Up
-    description: null
+    description: Reflections, next steps, shared resources, and community follow-up
     time: 14:00 - 14:15
-
-
-
