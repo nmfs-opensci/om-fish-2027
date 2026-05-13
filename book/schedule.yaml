@@ -3,9 +3,6 @@ tabs:
 - title: Day 1
   date: Monday
   contents:
-  - title: East Project Time
-    description: 10am to 1:30pm ET
-    time: 7:00 - 10:30
   - title: East Project Introduction
     description: Welcome, introductions, housekeeping, and overview of OM-Fish Hackweek themes
     time: 7:00 - 7:45
@@ -37,9 +34,6 @@ tabs:
     time: 13:00 - 14:00
   - title: Break
     time: 14:00 - 14:30
-  - title: West Project Time
-    description: 2:30pm to 5:30pm PT
-    time: 14:30 - 17:30
   - title: West Project Introduction
     description: Welcome, introductions, housekeeping, and overview of OM-Fish Hackweek themes
     time: 14:30 - 15:15
