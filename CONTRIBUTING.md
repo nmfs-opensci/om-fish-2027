@@ -20,7 +20,7 @@ To build our website, we need specific Python packages which are managed with th
 
     ```sh
     git clone {{website_url}}.git
-    cd Hackweek-2024-book
+    cd om-fish-2027
     ```
 
 1. Create a branch to add your changes:

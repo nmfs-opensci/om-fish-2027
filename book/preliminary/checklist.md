@@ -31,7 +31,7 @@ register, and record username and password somewhere for use during the hackweek
 [GitHub](https://github.com/) enables us to collaborate on code across teams in a web environment. If you do not already have a GitHub account, then navigate to [GitHub](https://github.com/), enter your email address and click on the green ‘Sign up for GitHub’ button. Be sure to save your username 
 and password somewhere for use during the hackweek.
 
-### Hackweek JupyterHub
+### HackWeek JupyterHub
 
 We will be using a pre-provisioned compute environment for the hackweek which can be accessed via a web browser. You will not need to install anything.
 Please follow these instructions which will guide you through gaining access to the JupyterHub. 

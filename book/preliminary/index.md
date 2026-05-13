@@ -52,7 +52,7 @@ The project work is a combination of
 
 Checkout projects from other hackweeks to get an idea of projects done in earth science hackweeks
 
-* [PACE Hackweek 2024 projects](https://pacehackweek.github.io/pace-2024/projects/list_of_projects.html)
+* [PACE HackWeek 2024 projects](https://pacehackweek.github.io/pace-2024/projects/list_of_projects.html)
 * [OceanHackWeek projects](https://oceanhackweek.org/ohw24_proj_catalog_us/OHW_project_table.html)
 * [Geosmart HackWeek 2024 projects](https://geosmart-2024.hackweek.io/projects/index.html#list-of-projects)
 * [OceanHackWeek 2025 projects](https://oceanhackweek.org/ohw25/projects/projects_thisyear.html)

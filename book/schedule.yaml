@@ -4,7 +4,7 @@ tabs:
   date: Monday
   contents:
   - title: East Project Introduction
-    description: Welcome, introductions, housekeeping, and overview of OM-Fish Hackweek themes
+    description: Welcome, introductions, housekeeping, and overview of OM-Fish HackWeek themes
     time: 7:00 - 7:45
   - title: East Group Project Brainstorming (3 rotations)
     description: Brainstorm project ideas around ocean model data, fisheries habitat, ecosystem indicators, and climate impacts
@@ -27,7 +27,7 @@ tabs:
     description: null
     time: 12:15 - 12:30
   - title: Coding Tutorial 1
-    description: Orientation for the Hackweek JupyterHub and shared cloud computing environment
+    description: Orientation for the HackWeek JupyterHub and shared cloud computing environment
     time: 12:30 - 13:00
   - title: Coding Tutorial 2
     description: Accessing global ocean model data with Python — xarray, dask, NetCDF, Zarr, and cloud-friendly workflows
@@ -35,7 +35,7 @@ tabs:
   - title: Break
     time: 14:00 - 14:30
   - title: West Project Introduction
-    description: Welcome, introductions, housekeeping, and overview of OM-Fish Hackweek themes
+    description: Welcome, introductions, housekeeping, and overview of OM-Fish HackWeek themes
     time: 14:30 - 15:15
   - title: West Group Project Brainstorming (3 rotations)
     description: Brainstorm project ideas around ocean model data, fisheries habitat, ecosystem indicators, and climate impacts
@@ -51,7 +51,7 @@ tabs:
   date: Tuesday
   contents:
   - title: East Tutorial
-    description: OM-Fish Hackweek Collaboration via Git and GitHub
+    description: OM-Fish HackWeek Collaboration via Git and GitHub
     time: 7:00 - 7:30
   - title: East Project Work Time
     description: Each project will have a breakout room.
@@ -79,7 +79,7 @@ tabs:
   - title: Break
     time: 14:00 - 14:30
   - title: West Tutorial
-    description: OM-Fish Hackweek Collaboration via Git and GitHub
+    description: OM-Fish HackWeek Collaboration via Git and GitHub
     time: 14:30 - 15:00
   - title: West Project Work Time
     description: Each project will have a breakout room.
