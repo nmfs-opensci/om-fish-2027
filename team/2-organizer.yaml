@@ -1,0 +1,20 @@
+- title: Organizer Team
+  avatar: https://raw.githubusercontent.com/nmfs-opensci/om-fish-2027/main/team/img/nmfs-opensci-logo-notext.png
+  role: Organizer team
+  organizations:
+    - name: home institution
+  bio: The organizer team is being confirmed.
+  expertise:
+    - ocean model experts
+    - fisheries and ocean ecosystem
+    - hackweek organization
+  social:
+    - icon: github
+      link: Link to your GitHub profile
+    - icon: twitter
+      link: Link to your Twitter profile
+    - icon: linkedin
+      link: Link to your LinkedIn profile
+  user_groups:
+    - Organizer team
+

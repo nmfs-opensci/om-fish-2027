@@ -4,23 +4,17 @@ The slides and recordings will be linked from this page as they become available
 
 | Title | Slides | Recording |
 | :---- | :----: | :-------: |
-| Welcome to the Hackweek      | [{{ l1 }}][welcome-view]  | [{{ v1 }}][welcome-vid] |
-| The PACE Mission             | [{{ l1 }}][pace-view]   | [{{ v1 }}][pace-vid] |
-| Hyperspectral Products for Fisheries Applications  |  [{{ l1 }}][hyper-view]  | [{{ v0 }}][hyper-vid] |
-| Harmful Algal Blooms and Hyperspectral Ocean Color Data     | [{{ l1 }}][habs-view]   | [{{ v1 }}][habs-vid] |
-| Phytoplankton Community Composition from Ocean Color  | [{{ l1 }}][phyto-view]  | [{{ v1 }}][phyto-vid] |
-| Optical Light Fields and Fish Behavior | [{{ l1 }}][light-view]   | [{{ v1 }}][light-vid] |
-| Hackweek Wrapup | [{{ l1 }}][wrapup-view]  | [{{ v1 }}][wrapup-vid] |
-
+| Welcome to the HackWeek      | [{{ l1 }}][welcome-view]  | [{{ v1 }}][welcome-vid] |
+|       |        |          |
 <!-- 
 | The Future of High-resolution Ocean Color | [{{ l0 }}][future-view]  | [{{ v0 }}][future-vid] |
 | Chlorophyll, Fish and Fisheries Management    | [{{ l0 }}][fish-view]  | [{{ v0 }}][fish-vid] | 
 -->
 
 
-[welcome-view]: https://docs.google.com/presentation/d/1fS9mCqvg_kWwCQ0Ud5_9uLb1CjNBw62e/present
+[welcome-view]: ""
 [welcome-dl]: ""
-[welcome-vid]: https://www.youtube.com/watch?v=rUI7ECz5huY
+[welcome-vid]: ""
 [hyper-view]: https://docs.google.com/presentation/d/1_58Q7n96RsMFZGf2xE7UCH4D35JV71ppg4uu3aUQrsA/present
 [hyper-dl]: https://drive.google.com/uc?export=download&id=1_Fdme7AYQapgd37o-JzyDx3oCReDd5r2
 [hyper-vid]: ""

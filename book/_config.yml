@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: OM-Fish Hackweek 2027
+title: OM-Fish HackWeek 2027
 author: content EE Holmes, template UW/eScience Institute
 logo: logo.png
 only_build_toc_files: false
@@ -10,7 +10,7 @@ parse:
   # https://jupyterbook.org/content/content-blocks.html?highlight=myst%20substitution#define-substitutions-for-your-whole-book
   # https://jupyterbook.org/content/content-blocks.html#using-substitutions-in-links
   myst_substitutions:
-    hackweek: "OM-Fish Hackweek"
+    hackweek: "OM-Fish HackWeek"
     dates: "January 2027"
     github_org_url: "https://github.com/nmfs-opensci"
     book_repo: "om-fish-2027"

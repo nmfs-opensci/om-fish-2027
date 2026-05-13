@@ -1,6 +1,6 @@
-# OM-Fish Hackweek JupyterBook
+# OM-Fish HackWeek JupyterBook
 
-OM-Fish Hackweek 2027: A hackweek focused on Ocean Models for Fisheries and Ocean Ecosystems
+OM-Fish HackWeek 2027: A hackweek focused on Ocean Models for Fisheries and Ocean Ecosystems
 
 ![image](https://raw.githubusercontent.com/nmfs-opensci/om-fish-2027/refs/heads/main/%7B%7B%20cookiecutter.repo_directory%20%7D%7D/assets/images/banner.png)
 

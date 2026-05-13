@@ -1,0 +1,21 @@
+- title: Mentor Team
+  avatar: https://raw.githubusercontent.com/nmfs-opensci/om-fish-2027/main/team/img/nmfs-opensci-logo-notext.png
+  role: Project mentors
+  organizations:
+    - name: home institution
+  bio: The project mentors join 1-2 projects during the event and help participant and project success.
+  expertise:
+    - ocean model experts
+    - fisheries and ocean ecosystem
+    - programming in Python or R
+    - data science
+  social:
+    - icon: github
+      link: Link to your GitHub profile
+    - icon: twitter
+      link: Link to your Twitter profile
+    - icon: linkedin
+      link: Link to your LinkedIn profile
+  user_groups:
+    - Project Mentor
+
