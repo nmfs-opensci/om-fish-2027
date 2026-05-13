@@ -15,7 +15,7 @@ banner:
     title: Event Book
     new_window: false
     style: btn-primary
-  image: assets/images/eastcoast_PACE_OCI_20240502T172807.png
+  image: assets/images/nwa_bluemarble-2048x1517-crop.png
 # The opening session of the event with UTC offset
 event_countdown: "2027-01-26T08:30:00-07:00"
 about:
