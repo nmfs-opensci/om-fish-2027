@@ -246,7 +246,7 @@ Citations use `repo@commit:path`. The repository short names are defined in the 
 
 - **Data access is the stated bottleneck** for Owen's 3-D work, which downloads 0–1000 m year by year (`explore_subsurface_heatwaves.qmd`).
 - **Mixed-language setups:** Megan runs Python from R through reticulate and pins `icechunk>=2.0.0` and `arraylake>=1.0.0` at runtime. The archive notes an `arraylake auth login` token issue.
-- **Data products have problems**: duplicated Jan–Jun 2025 time steps in the MOM6 monthly series (`sst-comparison.ipynb`, cell 5), and 0–360 longitude conventions handled by hand in every repo. The duplicates were still present on 2026-11-13: the `regrid/aux1` group (where `tos`, `MLD_003` and `ssh` live) has 396 time steps, against 390 in `regrid/main`, checked over OPeNDAP for this report.
+- **Data products have problems**: duplicated Jan–Jun 2025 time steps in the MOM6 monthly series (`sst-comparison.ipynb`, cell 5), and 0–360 longitude conventions handled by hand in every repo. The duplicates were still present on 2026-11-12: the `regrid/aux1` group (where `tos`, `MLD_003` and `ssh` live) has 396 time steps, against 390 in `regrid/main`, checked over OPeNDAP for this report.
 - **Bugs found and fixed while working:** Megan's depth filter was applied to longitude, then fixed and documented (`Yellowtail.qmd`). Owen's and Megan's repos have no equivalent check for their depth and distance logic (inferred from the absence of tests or validation notebooks).
 - **Local state needed to reproduce:** Owen's `/data` and outputs are git-ignored. Brooke's netCDFs live in Git LFS. Megan's static files are committed, about 16 MB.
 - **Code from other people's tools, ported:** coast angle and transport from "Mike's MATLAB" (Megan); the HCI method from Schroeder et al. 2022 (Owen); Isaac's plotting scripts (Brooke).
@@ -317,6 +317,7 @@ All repositories were cloned read-only on 2026-11-12. Nothing was run, and no la
 | Slides | *MOM6 / ESR Progress Update*, CC ESR Seaside Chat, 2026-10-30 (Hawkins, Schroeder, Liu, Pilcher, Feddern), 19 pp. | — | not in repo |
 
 Other branches checked: `esr` `copilot/update-sst-comparison-regridding-method` (`6d08488`); `oc_cciea` `gh-pages`.
+
 **Files read**
 
 - `esr`: `README.md`; `sst_anomaly/sst-comparison.ipynb`; `sst_anomaly/mom6/sst-anomaly.ipynb`; `sst_anomaly/mom6/contour_noaamom6hindcast_clim_anoms_season.py`; `sst_anomaly/oisst/contour_noaaoisst_clim_anoms_season.py`; `.gitattributes`.
@@ -332,7 +333,7 @@ Notes that apply to all three:
 
 - **Longitude is 0–360** in every group, so add 360 to negative longitudes.
 - **Groups:** `regrid/main` holds the 3-D fields (`thetao`, `uo_rotate`, `vo_rotate`, `rhopot0`, …). `regrid/aux1` holds the 2-D and derived fields (`tos`, `MLD_003`, `ssh`, …). The `raw/...` groups hold the same fields on the native curvilinear grid, with 2-D `geolat`/`geolon` coordinates on `jh`/`ih` dimensions.
-- **Duplicated months:** as of 2026-11-13, `regrid/aux1` has 396 time steps against 390 in `regrid/main`; Jan–Jun 2025 appear twice. Drop the duplicates before computing anything.
+- **Duplicated months:** as of 2026-11-12, `regrid/aux1` has 396 time steps against 390 in `regrid/main`; Jan–Jun 2025 appear twice. Drop the duplicates before computing anything.
 - **Release:** `main` always points at the newest build. The current store is a **draft built from r20250912**, not yet the production version. Record the date you read it, and use a snapshot or tag if the store offers one.
 
 ### B1. Python, native Icechunk (Brooke's pattern)
@@ -424,7 +425,7 @@ sst = (ds["tos"].drop_duplicates("time", keep="first")
        .sel(lat=slice(32, 48), lon=slice(-128 + 360, -116.8 + 360)))
 ```
 
-### How these were tested (2026-11-13)
+### How these were tested (2026-11-12)
 
 | Snippet | Result |
 |---|---|
