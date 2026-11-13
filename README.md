@@ -38,3 +38,19 @@ OR
 This is a clone of the eScience template repository designed to streamline creating two linked websites for a [UW eScience Hackweek](https://uwhackweek.github.io/hackweeks-as-a-service/intro.html).
 
 Please see the [eScience repository template](https://github.com/uwhackweek/jupyterbook-template) for usage, contributors and citation information.
+
+## Reuse and citation
+
+This work is released under the [MIT License](LICENSE). You are free to use, copy,
+modify, and redistribute it, including commercially. If you use it in published
+work, please cite it.
+
+Citation metadata is in [`CITATION.cff`](CITATION.cff). GitHub's **"Cite this
+repository"** button (top right of the repository page) will render it as BibTeX or
+APA for you.
+
+> Holmes, E.E. (2026). *OM-Fish HackWeek 2027: Ocean Models for Fisheries and Ocean
+> Ecosystems*. nmfs-opensci/om-fish-2027. https://github.com/nmfs-opensci/om-fish-2027
+
+The template this repository was built from is © 2021 uwhackweek, under the same
+MIT License.

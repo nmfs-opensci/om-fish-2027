@@ -1,0 +1,24 @@
+# Citation File Format — https://citation-file-format.github.io/
+# Validate with: pip install cffconvert && cffconvert --validate
+# Add `version` and `date-released` once the repository has a release, and keep
+# them in step after that. Add a `doi` line only once one has been minted.
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "OM-Fish HackWeek 2027: Ocean Models for Fisheries and Ocean Ecosystems"
+abstract: "Website, tutorials and reports for OM-Fish HackWeek 2027, a hackweek on using ocean models for fisheries and ocean ecosystem research."
+type: software
+authors:
+  - family-names: Holmes
+    given-names: Eli
+    name-particle: E.
+    email: eli.holmes@noaa.gov
+    affiliation: "Northwest Fisheries Science Center, NOAA Fisheries"
+    orcid: "https://orcid.org/0000-0001-9128-8393"
+repository-code: "https://github.com/nmfs-opensci/om-fish-2027"
+url: "https://github.com/nmfs-opensci/om-fish-2027"
+license: MIT
+keywords:
+  - hackweek
+  - ocean models
+  - fisheries
+  - MOM6
