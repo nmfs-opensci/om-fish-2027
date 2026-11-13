@@ -1,0 +1,15 @@
+---
+title: "How West Coast colleagues have used and evaluated MOM6-NEP10k so far"
+format:
+  typst:
+    papersize: us-letter
+    margin:
+      x: 0.6in
+      y: 0.7in
+    fontsize: 9.5pt
+    include-in-header:
+      - text: |
+          #show table: set text(size: 8pt)
+          #show table: set par(justify: false)
+          #show raw.where(block: false): set text(size: 0.95em)
+---
