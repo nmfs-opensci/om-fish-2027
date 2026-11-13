@@ -13,7 +13,7 @@ Five people are working with the CEFI MOM6-NEP10k hindcast for the California Cu
 
 Where the authors themselves describe agreement, the pattern is consistent. **Temperature-based quantities agree well**: SST, the HCI and the yellowtail spawning-season temperature. **Mixed layer depth and sea surface height agree moderately** with ROMS (r ≈ 0.7–0.87). **Velocity, transport and eddy kinetic energy agree weakly or not at all** (r from −0.27 to 0.69). **Subsurface oxygen and aragonite saturation are biased high**, which the author ties to a known low-productivity bias in this release.
 
-The same steps are coded separately in each repository and language, in different ways. Examples are pulling MOM6 from Earthmover, distance-from-coast masks, layer-thickness reconstruction, the HCI and area weighting. Two people have each built a MOM6 HCI with different settings.
+The same steps are coded separately in each repository and language, in different ways. Examples are pulling MOM6 from Earthmover, distance-from-coast masks, layer-thickness reconstruction, the HCI and area weighting. Two people have each built a MOM6 HCI with different settings. [Appendix C](#appendix-c-common-tasks-and-the-tutorials-they-suggest) turns these shared tasks into a list of candidate tutorials.
 
 ### At a glance: who is comparing what
 
@@ -432,3 +432,52 @@ sst = (ds["tos"].drop_duplicates("time", keep="first")
 | B3, Python | **Ran** in a clean venv (`xarray`, `netCDF4` only). `regrid/aux1` opened with 396 time steps (1993-01 to 2025-06, duplicates included); the SST subset was 187 × 39, mean 14.76 °C for the last month. |
 | B1, Python | **Not yet run successfully.** The clean venv installed `arraylake` 1.8.0, `icechunk` 2.3.1, `zarr` 3.4.2 and `xarray` 2026.9.0, but the hub's saved Earthmover token had expired (`invalid_grant`). The code follows Brooke's notebook, whose committed output shows it ran on 2026-09-17. |
 | B2, R | **Not run** (same login requirement). It follows Megan's committed qmd. |
+
+## Appendix C: common tasks, and the tutorials they suggest
+
+This appendix turns the shared steps in (b) into a list of candidate tutorials, ordered roughly as a workflow. "Who needed it" counts the people whose code or slides show the task; Darren and Isaac's MOM6 work count only where the slides make the task visible. "Start from" points to existing code that could seed a tutorial. Each tutorial would ideally come in both R and Python, since the work splits about evenly between them: Brooke and Isaac use Python, Megan and Owen use R.
+
+### Getting the data
+
+| # | Tutorial | Who needed it | What it should cover | Start from |
+|---|---|---|---|---|
+| 1 | **Open MOM6 from Earthmover and pull a subset** | Everyone with code (Brooke, Megan, Owen) | The three routes (native Icechunk in Python, the same from R via reticulate, OPeNDAP with no login); groups (`regrid/main`, `regrid/aux1`, `raw/...`); choosing variables; subsetting by box, depth and time before transferring; saving a local subset; estimating size first | Appendix B; `esr:sst_anomaly/mom6/sst-anomaly.ipynb`; `groundfish:PacificHake/Hake_Variables.qmd`; `heatwaves:code/download_monthly_thetao.R` |
+| 2 | **Know the product: releases, grids and conventions** | Everyone | Hindcast vs. forecast; releases and why to record or pin one; that the Earthmover version is a draft; 0–360 longitude; mid-month time stamps; dropping the duplicated 2025 months; variable names and units (`tos`, `thetao`, `MLD_003`, `uo_rotate`, …) | `esr:sst_anomaly/sst-comparison.ipynb` (cells 5–15) |
+| 3 | **Raw (native) vs. regrid grids** | Brooke (compared both); everyone else chose regrid | Curvilinear `geolat`/`geolon` on `jh`/`ih`; masking instead of slicing; when the choice matters (nearshore, velocities, transport); regrid's uneven spacing (≈0.086° × 0.288° in this box) | `esr:sst_anomaly/sst-comparison.ipynb` (cells 9–15) |
+| 4 | **Static grid information** | Megan, Owen, Isaac (ROMS/OISST) | Where bathymetry, cell area, distance-to-coast and coast angle come from, and how to align them with the data grid | `groundfish:STATIC/README.md`, `R/annual_mean_2d.R` |
+
+### Defining where and when
+
+| # | Tutorial | Who needed it | What it should cover | Start from |
+|---|---|---|---|---|
+| 5 | **Coastal and regional masks** | Megan, Owen, Isaac | Distance-from-shore bands (e.g. 0–30, 75, 150 km), isobath bands, the US EEZ, the HCI latitude regions; building them once and reusing them | `groundfish:STATIC/*`; `heatwaves:code/make hci.qmd`, `check_shear.R`; `oc_cciea:code_gha/HCI_ROMS/create_xdis_area_bath_mask_area.py` |
+| 6 | **Working with depth** | Megan, Owen; Darren (fixed depths at stations) | Selecting depth ranges on `z_l`; layer thickness from `z_i` or `z_l`; thickness-weighted means; depth-integrated quantities such as heat content; pulling values at a station and depth; isopycnals from `rhopot0` | `groundfish:R/annual_mean_3d_depthweighted.R`; `heatwaves:code/calculate_ohc.R`, `explore_subsurface_heatwaves.qmd` |
+| 7 | **Seasonal and life-stage windows** | Megan (≈30 life-stage indices), Brooke (seasonal anomalies), Owen (HCI months) | Month windows, including ones that wrap the year; carrying a window over from the previous year ("preconditioning"); a lookup-table approach so each index is defined once | `groundfish:PacificHake/Hake_Variables.qmd` (`lifestage_dict`) |
+
+### Making indices
+
+| # | Tutorial | Who needed it | What it should cover | Start from |
+|---|---|---|---|---|
+| 8 | **From a gridded field to a time series** | Everyone | Area-weighted spatial means (cos(latitude) or cell area); handling land and NaNs; monthly to seasonal to annual aggregation | `esr:sst_anomaly/sst-comparison.ipynb` (cells 16–20); `groundfish:R/eke_surface.R` |
+| 9 | **Climatologies, anomalies and baselines** | Brooke, Owen, Isaac | Monthly climatology; anomalies and z-scores; detrending; choosing a baseline when MOM6 starts in 1993 and existing products use 1980–2010 or 1982–present | `heatwaves:code/explore_ohc.qmd`; `esr:sst_anomaly/mom6/contour_noaamom6hindcast_clim_anoms_season.py` |
+| 10 | **Velocity, transport and eddy kinetic energy** | Megan; Owen (shear) | Rotated velocities (`uo_rotate`/`vo_rotate`); along-shore and cross-shore components using coast angle; transport through a section; surface EKE; vertical shear. This is the area where reported agreement is weakest, so it would also cover how calculation choices change results. | `groundfish:R/transport_3D.R`, `R/eke_surface.R`; `heatwaves:code/shear.R` |
+| 11 | **Recreating an existing CCIEA indicator from MOM6** | Brooke (SST anomaly maps); Isaac and Owen (HCI, separately) | Worked examples: the HCI from MOM6, and the ESR SST anomaly map. One shared HCI implementation would settle the two current versions. | `heatwaves:code/make hci.qmd`; `esr:sst_anomaly/mom6/`; `oc_cciea:code_gha/HCI_ROMS/` |
+| 12 | **Event and extreme metrics** | Owen | Marine heatwave area and frequency above a threshold; hotspots; breakpoint and regime-shift tests on index time series | `heatwaves:code/explore_ohc.qmd` |
+
+### Comparing with other data
+
+| # | Tutorial | Who needed it | What it should cover | Start from |
+|---|---|---|---|---|
+| 13 | **Getting comparison datasets** | Everyone | OISST, CCIEA indices (HCI, PDO, NPGO) and Trinidad Head CTD from ERDDAP; GLORYS; UCSC ROMS via CeNCOOS OPeNDAP; CORA; CUGN gliders; the Newport Hydrographic Line | `oc_cciea:code_gha/SSTspatial/sst_oi_daily_v21_update.py`, `code_gha/HCI_ROMS/nrt_roms_daily_update.py`; `groundfish:R/fetch_erddap_metric.R`; `heatwaves:code/process_cora.R`, `process_cugn.R`, `process_TH_temperature.R` |
+| 14 | **Putting model and observations on the same grid** | Brooke | Bilinear vs. conservative regridding with xESMF; regridding both products to a common coarser grid (Brooke's own suggestion); model-to-point extraction for stations and gliders | `esr:sst_anomaly/sst-comparison.ipynb`; `esr` branch `copilot/update-sst-comparison-regridding-method` |
+| 15 | **Skill metrics and how to report them** | Everyone | Bias, RMSE, correlation (gridded, time series, maps); correlation of standardized annual indices, and what it hides (bias); monthly-climatology comparisons; seasonal and regional breakdowns; a common way to state "agreement" so results can be pooled into one table like (c) | `esr:sst_anomaly/sst-comparison.ipynb` (cells 18–33); `groundfish:Yellowtail/Yellowtail.qmd` |
+
+### Not yet done by anyone, but implied
+
+| # | Tutorial | Why | Notes |
+|---|---|---|---|
+| 16 | **Using the seasonal forecast** | No one has used it yet; the slides list "develop new indices with new variables and forecast" (Slides, p. 19) | Leads and ensemble members, forecast anomalies, skill against the hindcast and observations |
+| 17 | **Daily data** | Everyone used monthly data | When daily is needed (heatwave duration, upwelling events) and what is available on Earthmover |
+| 18 | **Reproducible MOM6 workflows** | Several repos depend on local files, Git LFS or an unpinned release | Recording or pinning the release, environment files (including R and Python together), keeping derived files small and documented |
+
+**A possible core sequence.** Tutorials 1, 2, 5, 6, 8, 9, 13 and 15 cover what nearly everyone had to do: access, conventions, masks, depth, spatial means, anomalies, comparison data and skill metrics. The others are specialist add-ons.
